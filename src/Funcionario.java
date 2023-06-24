@@ -31,11 +31,11 @@ public class Funcionario {
         this.salary = salary;
     }
 
-    public void setBonus(double salary) {
-        this.salary += salary;
+    public void setBonus() {
+        setSalary(this.getSalary() + this.getBonus());
     }
 
-    public double getBonus(double salary) {
-        return salary;
+    public double getBonus() {
+        return this.salary * 0.1;
     }
 }

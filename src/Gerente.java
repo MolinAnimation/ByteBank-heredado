@@ -16,7 +16,7 @@ public class Gerente extends Funcionario {
     }
 
     @Override
-    public void setBonus(double salary) {
-        super.setSalary(salary + salary);
+    public double getBonus() {
+        return this.getSalary();
     }
 }
