@@ -7,14 +7,10 @@ public class Cuenta {
 
     private static int total;
 
-    public Cuenta() {
-
-    }
-
     public Cuenta(int agencia, int numero) {
         this.agencia = agencia;
         this.numero = numero;
-        System.out.println("Estoy creando una cuenta " + this.numero);
+        // System.out.println("Estoy creando una cuenta " + this.numero);
 
         Cuenta.total++;
     }

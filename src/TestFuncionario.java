@@ -6,14 +6,14 @@ public class TestFuncionario {
         diego.setName("Diego");
         diego.setDocumentId("37450340");
         diego.setSalary(2000);
-        diego.setBonus(10);
+        diego.setBonus();
 
         System.out.println(diego.getSalary());
 
         Gerente andres = new Gerente("dieguitoMaradona");
 
         andres.setSalary(5000);
-        andres.setBonus(andres.getSalary());
+        andres.setBonus();
 
         System.out.println(andres.getSalary());
 
