@@ -1,4 +1,4 @@
-public class Cuenta {
+public abstract class Cuenta {
 
     protected double saldo;
     private int agencia = 1;

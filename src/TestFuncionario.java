@@ -1,7 +1,7 @@
 
 public class TestFuncionario {
     public static void main(String[] args) {
-        Funcionario diego = new Funcionario();
+        Funcionario diego = new Designer();
 
         diego.setName("Diego");
         diego.setDocumentId("37450340");

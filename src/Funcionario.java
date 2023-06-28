@@ -1,4 +1,4 @@
-public class Funcionario {
+public abstract class Funcionario {
     private String name;
     private String documentId;
     private double salary;
@@ -35,7 +35,5 @@ public class Funcionario {
         setSalary(this.getSalary() + this.getBonus());
     }
 
-    public double getBonus() {
-        return this.salary * 0.1;
-    }
+    public abstract double getBonus();
 }
