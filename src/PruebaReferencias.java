@@ -1,6 +1,6 @@
 public class PruebaReferencias {
     public static void main(String[] args) {
-        Funcionario andres = new Gerente("pass");
+        Funcionario andres = new Gerente();
         EditorVideo juan = new EditorVideo();
         Designer diseniador = new Designer();
 

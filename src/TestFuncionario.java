@@ -10,7 +10,7 @@ public class TestFuncionario {
 
         System.out.println(diego.getSalary());
 
-        Gerente andres = new Gerente("dieguitoMaradona");
+        Gerente andres = new Gerente();
 
         andres.setSalary(5000);
         andres.setBonus();

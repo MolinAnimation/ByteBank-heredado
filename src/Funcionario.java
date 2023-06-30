@@ -2,6 +2,7 @@ public abstract class Funcionario {
     private String name;
     private String documentId;
     private double salary;
+    public String password;
 
     public Funcionario() {
 

@@ -1,9 +1,10 @@
 
-public class Cliente {
+public class Cliente implements Autenticable {
 
     private String nombre;
     private String documento;
     private String telefono;
+    private String password;
 
     public String getNombre() {
         return nombre;
@@ -27,6 +28,20 @@ public class Cliente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public void setPass(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public boolean login(String password) {
+        if (this.password == password) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

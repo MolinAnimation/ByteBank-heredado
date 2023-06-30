@@ -1,22 +1,24 @@
 
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Autenticable {
 
     private String passWord;
-
-    public Gerente(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public boolean login(String passWord) {
-        boolean verified = false;
-        if (this.passWord == passWord) {
-            verified = true;
-        }
-        return verified;
-    }
 
     @Override
     public double getBonus() {
         return this.getSalary();
+    }
+
+    @Override
+    public void setPass(String pass) {
+        this.passWord = pass;
+    }
+
+    @Override
+    public boolean login(String pass) {
+        boolean verified = false;
+        if (this.passWord == pass) {
+            verified = true;
+        }
+        return verified;
     }
 }
