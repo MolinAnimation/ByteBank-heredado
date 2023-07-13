@@ -1,3 +1,7 @@
+package Test;
+
+import Model.EditorVideo;
+
 public class PruebaReferencias {
     public static void main(String[] args) {
         Funcionario andres = new Gerente();
