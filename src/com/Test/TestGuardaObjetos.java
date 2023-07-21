@@ -15,5 +15,6 @@ public class TestGuardaObjetos {
         System.out.println(so.getObject(0));
         System.out.println(so.getObject(1));
 
+        System.out.println(so.getObjectQuantity());
     }
 }

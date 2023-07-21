@@ -2,16 +2,24 @@ package com.Model;
 
 public class GuardaObjetos {
 
-    int count = 0;
+    int count;
+    Object[] ref;
 
-    Object object[] = new Object[10];
+    public GuardaObjetos() {
+        this.ref = new Object[10];
+        this.count = 0;
+    }
 
     public void saveObject(Object obj) {
-        object[count] = obj;
+        ref[count] = obj;
         count++;
     }
 
     public Object getObject(int index) {
-        return object[index];
+        return ref[index];
+    }
+
+    public int getObjectQuantity() {
+        return this.count;
     }
 }
