@@ -75,4 +75,14 @@ public abstract class Cuenta {
         return Cuenta.total;
     }
 
+    public boolean esIgual(Cuenta cuenta) {
+        return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Cuenta cuenta = (Cuenta) obj;
+        return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+    }
+
 }

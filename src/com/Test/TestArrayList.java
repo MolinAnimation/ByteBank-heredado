@@ -1,6 +1,8 @@
 package com.Test;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.Model.*;
 
@@ -9,10 +11,12 @@ public class TestArrayList {
     public static void main(String[] args) {
         // <> fuerza a que acepte un solo tipo de objeto, ayuda a la manipulacion y
         // manejo de los metodos
-        ArrayList<Cuenta> list = new ArrayList<>();
+        List<Cliente> listaClientes = new LinkedList<>();
+        List<Cuenta> list = new ArrayList<>();
 
-        Cuenta cc = new CuentaCorriente(1, 2);
+        Cuenta cc = new CuentaCorriente(4, 2);
         Cuenta cc2 = new CuentaCorriente(1, 5);
+        Cuenta cc3 = new CuentaCorriente(1, 5);
 
         list.add(cc);
         list.add(cc2);
@@ -32,5 +36,12 @@ public class TestArrayList {
             System.out.println(cuenta.getSaldo());
             count++;
         }
+
+        boolean contiene = list.contains(cc2);
+        boolean cont = list.contains(cc3);
+        if (cont) {
+            System.out.println("si contains ");
+        }
+
     }
 }
