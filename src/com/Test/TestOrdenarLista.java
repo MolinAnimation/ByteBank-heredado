@@ -37,7 +37,11 @@ public class TestOrdenarLista {
             System.out.println(cuenta.getNumero());
         }
         // instancia el comparador
+
         Comparator<Cuenta> comparador = new Ordenador();
+        // esta instanciacion se puede evitar llamando directamente al objeto desde el
+        // sort asi
+        lista.sort(new Ordenador());
         // llama al metodo sort
         lista.sort(comparador);
         System.out.println("//////////");
@@ -75,13 +79,21 @@ public class TestOrdenarLista {
 
         @Override
         public int compare(Cuenta o1, Cuenta o2) {
-            if (o1.getNumero() == o2.getNumero()) {
-                return 0;
-            } else if (o1.getNumero() > o2.getNumero()) {
-                return 1;
-            } else {
-                return -1;
-            }
+
+            // forma basica algortimo
+            // if (o1.getNumero() == o2.getNumero()) {
+            // return 0;
+            // } else if (o1.getNumero() > o2.getNumero()) {
+            // return 1;
+            // } else {
+            // return -1;
+            // }'
+
+            // forma intermedia resta
+            // return o1.getNumero() - o2.getNumero();
+
+            // forma wrapper metodo Integer.compare()
+            return Integer.compare(o1.getNumero(), o2.getNumero());
 
         }
 
