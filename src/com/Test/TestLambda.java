@@ -7,9 +7,10 @@ import java.util.List;
 import com.Model.Cliente;
 import com.Model.Cuenta;
 import com.Model.CuentaAhorros;
+import com.Test.SortTest.OrdenNumeroCuenta;
+import com.Test.SortTest.OrdenTitular;
 
-public class SortTest {
-
+public class TestLambda {
     public static void main(String[] args) {
 
         Cuenta cc = new CuentaAhorros(22, 5);
@@ -93,37 +94,12 @@ public class SortTest {
             }
         });
 
-    }
-
-    public static class OrdenNumeroCuenta implements Comparator<Cuenta> {
-
-        @Override
-        public int compare(Cuenta o1, Cuenta o2) {
-
-            // forma basica algortimo
-            // if (o1.getNumero() == o2.getNumero()) {
-            // return 0;
-            // } else if (o1.getNumero() > o2.getNumero()) {
-            // return 1;
-            // } else {
-            // return -1;
-            // }'
-
-            // forma intermedia resta
-            // return o1.getNumero() - o2.getNumero();
-
-            // forma wrapper metodo Integer.compare()
+        // lambdas
+        lista.sort((Cuenta o1, Cuenta o2) -> {
             return Integer.compare(o1.getNumero(), o2.getNumero());
-        }
+        });
 
-    }
-
-    public static class OrdenTitular implements Comparator<Cuenta> {
-
-        @Override
-        public int compare(Cuenta o1, Cuenta o2) {
-            return o1.getTitular().getNombre().compareToIgnoreCase(o2.getTitular().getNombre());
-        }
-
+        // lambdas mas sencillo
+        lista.sort((Cuenta o1, Cuenta o2) -> Integer.compare(o1.getNumero(), o2.getNumero()));
     }
 }
