@@ -1,8 +1,9 @@
 package com.Model;
 
 public class GuardaObjetos {
+    // emula un array de objetos con sus metodos de guardar y obtener
 
-    int count;
+    int count = 0;
     Object[] ref;
 
     public GuardaObjetos() {

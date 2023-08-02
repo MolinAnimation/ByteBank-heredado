@@ -1,6 +1,7 @@
 package com.Model;
 
 public class GuardaCuentas {
+    // es una emulacion de un arraylist
     public static int count = 0;
 
     // crear un objeto para guardar cuentas
